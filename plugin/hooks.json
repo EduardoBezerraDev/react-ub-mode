@@ -1,0 +1,12 @@
+{
+  "react-ub-mode-session": {
+    "enabled": true,
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "node ./scripts/session-start.mjs",
+        "timeout": 5
+      }
+    ]
+  }
+}

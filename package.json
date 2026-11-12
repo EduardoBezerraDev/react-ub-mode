@@ -1,0 +1,52 @@
+{
+  "name": "react-ub-mode",
+  "version": "1.0.0",
+  "description": "React & TypeScript frontend engineering discipline skill, Antigravity/agent plugin, and deterministic AST quality-gate CLI (crapper, dryer, mutator, react-audit) inspired by unclebob/ub-mode.",
+  "type": "module",
+  "bin": {
+    "react-ub": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "SKILL.md",
+    "plugin",
+    "chatgpt",
+    "README.md",
+    "README.pt-BR.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && node scripts/sync-skill.mjs && chmod +x dist/cli.js",
+    "test": "npm run build && tsc -p tsconfig.test.json && node --test dist-test/tests/*.test.js",
+    "test:coverage": "npm run build && tsc -p tsconfig.test.json && mkdir -p coverage && node --enable-source-maps --test --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=coverage/lcov.info dist-test/tests/*.test.js",
+    "lint:skill": "node scripts/sync-skill.mjs --check",
+    "gate": "node dist/cli.js gate .",
+    "setup:global": "npm run build && npm link && node dist/cli.js setup --copy"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "ub-mode",
+    "clean-code",
+    "crap",
+    "mutation-testing",
+    "duplication",
+    "agent-skill",
+    "claude-code",
+    "cursor",
+    "antigravity"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10"
+  }
+}

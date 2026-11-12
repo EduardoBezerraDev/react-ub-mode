@@ -1,0 +1,10 @@
+{
+  "name": "react-ub-mode",
+  "author": {
+    "name": "react-ub-mode"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-ub-mode/react-ub-mode"
+  }
+}
